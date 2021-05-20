@@ -1,0 +1,8 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container__header {
+    margin-left: 2px;
+}

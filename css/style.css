@@ -1,0 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+        font-family: 'Roboto', sans-serif; /* skopiowane z fonts.google.com*/
+        background:#eee;
+}

@@ -1,0 +1,19 @@
+.section {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.section__item {
+    padding: 15px;
+    background: rgb(255, 255, 255);
+    margin: 1px;
+    flex-basis: 20px;
+}
+
+.section__item--header {
+    font-size: 20px;
+    font-weight: 600;
+}
+
