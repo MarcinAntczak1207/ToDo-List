@@ -11,8 +11,51 @@
     margin: 1px;
 }
 
+.section__header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+
+@media(max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
+    }
+    .section__item--header {
+        margin-bottom: 0px;
+}};
+
 .section__item--header {
     font-size: 20px;
     font-weight: 700;
+    margin-right: 0px;
+
 }
 
+.section__buttons {
+    color: teal;
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    transition: 0.6s;
+    padding: 4px;
+    margin: 1px;
+    margin-left: -1px;
+    padding-right:8px;
+}
+/* background: transparent; - przyciski bez tła */
+.section__buttons:hover {
+    color: hsl(180, 100%, 32%);
+}
+
+.section__buttons:disabled {
+    color: hsla(0, 0%, 50%, 0.575);
+}
+
+@media(max-width: 767px) {
+    .section__buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1px;
+        margin-top: 0px;
+    }
+}
