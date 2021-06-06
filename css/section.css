@@ -12,23 +12,14 @@
 }
 
 .section__header {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
+    padding: 15px;
+    background: rgb(255, 255, 255);
+    margin: 1px;
 }
 
-@media(max-width: 767px) {
-    .section__header {
-        grid-template-columns: 1fr;
-    }
-    .section__item--header {
-        margin-bottom: 0px;
-}};
-
-.section__item--header {
-    font-size: 20px;
-    font-weight: 700;
-    margin-right: 0px;
-
+.section__container {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
 }
 
 .section__buttons {
@@ -41,8 +32,17 @@
     margin: 1px;
     margin-left: -1px;
     padding-right:8px;
+    cursor: pointer;
 }
-/* background: transparent; - przyciski bez tła */
+
+@media(max-width: 767px) {
+    .section__container {
+        grid-template-columns: 1fr;
+    }
+    .section__header {
+        margin-bottom: 0px;
+}};
+
 .section__buttons:hover {
     color: hsl(180, 100%, 32%);
 }

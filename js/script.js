@@ -34,20 +34,9 @@
   };
 
   const completeAllTasks = () => {
-    tasks = tasks.map(task => { return { content: task.content, done: true } });
+    tasks = tasks.map(task => ({ content: task.content, done: true }));
     render();
   };
-
-  /* powyższe inaczej: tasks = tasks.map((task) => ({
-    ...task, 
-    done: true,}))
-   
-  jeszcze inaczej powyższe: tasks = tasks.map((task) => {
-  if (task.done)
-   { return task;} 
-
-  return { ...task, 
-  done: true,};}); */
 
   const bindRemoveEvents = () => {
     const removeButtons = document.querySelectorAll(".js-remove");
@@ -95,18 +84,6 @@
     document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
   };
 
-  /* (zagmatwana troche metoda)
-można też powyższe inaczej:
-const renderTasks = () => {
-  const taskToHTML = task => `
-  <li class=..............
-  </li>`;
-
-  const tasksElement = document.querySelector(".js-tasks");
-  tasksElement.innerHTML = tasks.map(taskToHTML).join("");
-}
-  */
-
   const renderButtons = () => {
     let buttonsHTMLContent = "";
 
@@ -116,28 +93,13 @@ const renderTasks = () => {
      ${hideDoneTasks ? "Pokaż ukończone" : "Ukryj ukończone"}
      </button>
      <button class="section__buttons js-completeAllTasksButton"
-     ${tasks.every(task => task.done /* ({ done })=> done */) ? "disabled" : ""}>   
+     ${tasks.every(task => task.done) ? "disabled" : ""}>   
      Ukończ wszystkie
      </button>`;
     };
     document.querySelector(".js-sectionButtons").innerHTML = buttonsHTMLContent;
 
   }; 
-/*
-powyższe inaczej:
-const renderButtons = () =>  {
-  const buttonsElement = document.querySelector(".js-sectionButtons");
-
-  if (!tasks.length) {
-    buttonsElement.innerHTML = "";
-    return;
-  }
- 
-  buttonsElement.innerHTML=
-  <button class...........
-
-}
-*/
 
   const bindButtonsEvents = () => {
 

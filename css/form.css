@@ -19,6 +19,7 @@
     padding: 10px;
     color: white;
     transition: 1s;
+    cursor: pointer;
 }
 
 .form__button:hover {
